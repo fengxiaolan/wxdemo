@@ -1,0 +1,9 @@
+/* pages/search/search.wxss */
+#myAudio{
+  width:100%;
+}
+.ree{
+  position: absolute;
+  top:100px;
+  left: 20px;
+}

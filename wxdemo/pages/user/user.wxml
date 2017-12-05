@@ -1,0 +1,19 @@
+<!--pages/user/user.wxml-->
+ <import src="../../static/templates/header.wxml"  />
+
+<view class="userbox">
+  <text>user--{{msg}}</text>
+  <text>game---{{obj.game}}</text>
+  <text data-id="{{cid}}">id</text>
+  <view wx:for="{{todos}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+    <view>{{item.name}}--{{idx}}</view>
+  </view>
+  <view wx:if="{{condition}}">条件显示</view>
+   <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511186326588&di=59ef0434a9a6fb69e447e11ff178facc&imgtype=0&src=http%3A%2F%2Fwww.qq1234.org%2Fuploads%2Fallimg%2F150514%2F154U2MZ-9.jpg" style="height:120px"></image> 
+  <button bindtap="handleTap">click me</button>
+  <button bindtap="handleTap1">click me touser</button>
+  <button catchtap="handleCatch" data-id="cd">点我哟</button>
+  <button catchtap="handleCatch" data-id="sn" >点我哟1</button>
+{{name}}
+  <template is="copyright" data="{{company}}"></template>
+</view>

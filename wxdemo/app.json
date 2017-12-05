@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/focus/focus",
+    "pages/logs/logs",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "#eee",
+    "navigationBarBackgroundColor": "#0cc440",
+    "navigationBarTitleText": "小兰子",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#e7e7e7"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#0f0",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/boy.png",
+        "selectedIconPath": "static/images/girl.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "static/images/boy.png",
+        "selectedIconPath": "static/images/girl.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "发现",
+        "iconPath": "static/images/boy.png",
+        "selectedIconPath": "static/images/girl.png"
+      },
+      {
+        "pagePath": "pages/focus/focus",
+        "text": "关注",
+        "iconPath": "static/images/boy.png",
+        "selectedIconPath": "static/images/girl.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "登录",
+        "iconPath": "static/images/boy.png",
+        "selectedIconPath": "static/images/girl.png"
+      }
+    ]
+  },
+  "debug": false,
+  "networkTimeout": {
+    "request": 3000
+  }
+}

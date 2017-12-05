@@ -1,0 +1,4 @@
+wxdemoback---快速搭建的后台环境（配置全局url，就是服务器端的url）
+   启动：node server
+
+wxdemo---在微信开发者工具中运行 

@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+<view class='loginbox'>
+  <form bindsubmit='submit'>
+    <label>用户名：<input name="username"></input></label>
+    <label>密码：<input name="pwd" maxlength="8"></input></label>
+    <button form-type='submit'>提交</button>
+  </form>
+
+  <button catchtap="chooseImg">选择图片</button>
+  <!-- <image src="{{imgSrc}}"></image> -->
+
+  <button catchtap='getSys'>获取系统信息</button>
+  <button catchtap='getNet'>获取网络状态</button>
+  <button catchtap='call'>拨打电话</button>
+  <button catchtap='vibrate' animation="{{animationData}}">震动</button>
+  
+  
+</view>

@@ -1,0 +1,96 @@
+<!--pages/focus/focus.wxml-->
+<view>
+<view hover-stop-propagation  class="border" hover-class="active">点击关注</view>
+
+<scroll-view style="height:100rpx;border:1px dashed blue;" scroll-y  enable-back-to-top scroll-top="50" scroll-with-animation bindscrolltolower="handlelower">
+   <view class="red">1</view>
+   <view class="green">2</view>
+   <view class="red">3</view>
+   <view class="green">4</view>
+</scroll-view>
+
+<swiper indicator-dots indicator-active-color="red" circular current="1" bindchange='handleChange'>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<movable-area style="height: 60px;width: 60px;background: red;">
+    <movable-view style="height: 30px; width: 30px; background: blue;" direction="all">
+    </movable-view>
+</movable-area>
+
+<icon type="download" size="30" color="red"></icon>
+
+<progress show-info active percent="60" stroke-width="3"/>
+
+<form bindsubmit="handleSubmit">
+
+<input name="username" placeholder="请输入....再提交"   placeholder-class='pl' focus confirm-type="send" value="{{msg}}" bindinput='handleUser' ></input>
+<button loading size="mini" type="primary" form-type="submit">提交</button>{{msg}}
+
+<checkbox-group>
+  <label>旅游<checkbox color="red" value="ly"></checkbox></label>
+  <label>美食<checkbox value="ms"></checkbox></label>
+  <label>运动<checkbox value="yd"></checkbox></label>
+</checkbox-group>
+
+<checkbox-group bindchange="checkboxChange" name="country">
+  <label class="checkbox" wx:for="{{items}}" wx:key="{{index}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</checkbox-group>
+
+ <picker mode="region"  bindchange="handleregion">
+    <view>
+      <!-- {{region}} -->
+      点击当前选择：
+       {{region[0]}}--{{region[1]}}--{{region[2]}} 
+    </view>
+  </picker>
+  <text>换行</text>
+   <picker range="{{movies}}"  bindchange="handlemovie" value="{{idx}}">
+    <view>
+      点击当前选择喜欢的电影：{{movies[idx]}}
+    </view>
+  </picker>
+   <text>换行</text>
+    <picker range="{{country}}" range-key="name" bindchange="handleCountry" value="{{idx}}">
+    <view>
+      点击当前选择喜欢的国家：{{country[idx].name}}
+    </view>
+  </picker>
+   <text>换行</text>
+   <picker mode="date" bindchange="handledate" value="{{date}}" name="date" fields="month" end="2017-12-31" >
+    <view>
+      点击当前选择时间：{{date}}
+    </view>
+  </picker>
+  
+  <picker-view indicator-style="height: 30px;" style="width: 100%; height: 100px;" value="{{value}}" bindchange="bindChange" name="times">
+      <picker-view-column>
+      <view wx:for="{{years}}" style="line-height:30px" wx:key="{{index}}">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 30px" wx:key="{{index}}">{{item}}月</view>
+    </picker-view-column>
+  </picker-view>
+
+<view>换行</view>
+<radio-group bindChange="handleradio" name="sex">
+<label>男 <radio value="1" color="pink" checked="{{true}}"></radio></label>
+<label>女 <radio value="0"></radio></label>
+</radio-group>
+
+<slider value="60" step="5" activeColor="blue" show-value bindchange="handleslider"/>
+
+<switch checked color="red" bindchange="handleswitch"/>
+
+</form>
+
+<navigator url="/pages/logs/logs"  open-type="navigate">跳转到logs</navigator>
+<navigator url="/pages/user/user"  open-type="switchTab">跳转到user</navigator>
+
+</view>

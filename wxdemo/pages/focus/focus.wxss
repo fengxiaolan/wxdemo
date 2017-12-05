@@ -1,0 +1,27 @@
+/* pages/focus/focus.wxss */
+.border{
+  border:1px solid #ff4;
+}
+.active{
+  background:lightgreen;
+  width: 200px;
+  height: 20px;
+}
+.red{
+  height: 100rpx;
+  background: red;
+}
+.green{
+  height: 100rpx;
+  background: green;
+}
+image{
+  width: 375px;
+  height: 240px;
+}
+swiper{
+  height: 100px;
+}
+.pl{
+  color:hotpink;
+}
